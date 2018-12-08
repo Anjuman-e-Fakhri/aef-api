@@ -19,11 +19,16 @@ from rest_framework import routers
 from api import views
 
 router = routers.DefaultRouter()
-router.register(r'mumin', views.MuminViewSet)
+router.register(r'mumineen', views.MuminViewSet)
 
 
 urlpatterns = [
     path('api/', include(router.urls)),
-    path('api-auth/', include('rest_framework.urls', namespace='rest_framework')),
+    path('api-auth/', include('rest_framework.urls',
+                              namespace='rest_framework')),
     path('admin/', admin.site.urls)
 ]
+
+admin.site.site_header = "Mississauga Jamaat Admin"
+admin.site.index_title = "Jamaat Administration"
+admin.site.site_title = "Jamaat Admin"
