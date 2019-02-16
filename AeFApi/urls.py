@@ -26,7 +26,7 @@ urlpatterns = [
     path('api/', include(router.urls)),
     path('api-auth/', include('rest_framework.urls',
                               namespace='rest_framework')),
-    path('admin/', admin.site.urls)
+    path('', admin.site.urls),
 ]
 
 admin.site.site_header = "Mississauga Jamaat Admin"
